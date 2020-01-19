@@ -51,7 +51,7 @@ key1_enc = file.read() # The key will be type bytes
 file.close()
 
 spriv=b'''your hardcoded rsa private key or import .pem file directly in the next line'''
-#keypub = RSA.import_key(open("your-key-name.pem").read())
+#spriv = RSA.import_key(open("your-key-name.pem").read())
 keypub = RSA.import_key(spriv)
 cipher_rsa1 = PKCS1_OAEP.new(keypub)
 key1 = cipher_rsa1.decrypt(key1_enc)
