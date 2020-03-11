@@ -6,3 +6,5 @@ aese.py - python script which encrypts all files from the current working direto
 aesd.py - python script which decrypts all files (when placed in the directory in which the readme folder created by aese.py is present)
 
 rsa.py - program to generate rsa-2048 key pair which can be hardcoded in the encryption and decryption scripts
+
+WARNING : the executable file 'aese' is programmed to encrypt everything from the home directory of the user. so do not ry this without a virtual machine to test it on.
