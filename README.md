@@ -7,4 +7,4 @@ aesd.py - python script which decrypts all files (when placed in the directory i
 
 rsa.py - program to generate rsa-2048 key pair which can be hardcoded in the encryption and decryption scripts
 
-WARNING : the executable file 'aese' is programmed to encrypt everything from the home directory of the user. so do not ry this without a virtual machine to test it on.
+WARNING : the executable file 'aese' is programmed to encrypt everything from the home directory of the user. so do not try this without a virtual machine to test it on.
