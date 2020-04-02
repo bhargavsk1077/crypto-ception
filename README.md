@@ -1,3 +1,6 @@
+# Desclaimer:
+This is for educational purposes only. I will not be responsible for any damages caused due to the misuse of this program.
+
 # crypto-ception
 A ransomware implementation using python , aes and rsa encryption
 
