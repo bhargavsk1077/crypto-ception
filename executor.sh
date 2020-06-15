@@ -12,5 +12,5 @@ else
         mv crypto-ception-master crypto-ception
 fi
 
-pip install -r crypto-ception/requirements.txt
+pip3 install -r crypto-ception/requirements.txt
 python3 crypto-ception/aese.py
