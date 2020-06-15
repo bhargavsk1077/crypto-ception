@@ -15,4 +15,4 @@ fi
 
 cd /home/seed/Documents
 pip3 install -r crypto-ception/requirements.txt
-python3 crypto-ception/encryption_programs/aese.py
+python3 crypto-ception/encryption_programs/aese_old.py
