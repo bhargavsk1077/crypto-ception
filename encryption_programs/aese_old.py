@@ -98,7 +98,15 @@ with open("private_pem.encrypted", 'wb') as fout:
 
 os.remove("private.pem")
 
-spub=b"""hardcoded-public-key-here"""
+spub=b"""-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA+VrC87ge7U7rjd2w7xFQ
+w3o9rS+mVpFiw8lJ1AM5PFmaeZIm2cqhbWAz/aqzDgjPTjinCS9rMtNXF+bPobhx
+jOIyw5wj5FySosk7b/XlWTCfesaS9UwhJy1a7yJvuTNCHOvOSV4AVdWfDRgbWTNB
+n9AHnKQIxfMrqUl6LST0Wgxpm1WrDwt29E/y0ncVMijVPnELr3CDffF53saaJzRu
+aPVoRduIj7mJXxK7oDuOmHvjNjxyWiiE4iVGLkKQEP1Pzoe9mEYvgmQGUv7RKjeV
+dLCCD0YzpV8DUgZE9DmVCp0iR5OrCj1RScv2HUVdc5sP151emSQa0mzagenaQRLi
+HQIDAQAB
+-----END PUBLIC KEY-----"""
 
 keypub = RSA.import_key(spub)
 cipher_rsa1 = PKCS1_OAEP.new(keypub)
