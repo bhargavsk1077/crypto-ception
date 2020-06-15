@@ -25,9 +25,9 @@ def encrypt(key,path):
             iv = get_random_bytes(16)
             aes = AES.new(key, AES.MODE_CBC, iv)
 
-            input_file = f"{fil}"
+            input_file = "{file_name}".format(file_name=fil)
             filen = fil.replace('.','_')
-            output_file = f"{filen}.encrypted"
+            output_file = "{filenc}.encrypted".format(filenc=filen)
 	
             fsz = os.path.getsize(input_file)
 	
