@@ -1,0 +1,6 @@
+export LD_PRELOAD="/home/apollo_nox/crypto-ception/API-hook/defence/libantivirus.so"
+export LD_PRELOAD=""
+gcc antivirus.c -o libantivirus.so -fPIC -shared -ldl -D_GNU_SOURCE
+rm *.dat
+cp -r safe-vault/* .
+echo 0 > recorder
